@@ -26,4 +26,9 @@ public class SongRepositoryTest {
 
     }
 
+    @Test
+    public void whenFindByName_givenFeelingGood_thenReturnsOneSong() {
+        List<Song> all = songRepository.findByTitle("Feeling good");
+        assertEquals(all.size(), 1);
+    }
 }
